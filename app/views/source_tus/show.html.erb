@@ -1,0 +1,16 @@
+<% title "Source Tu" %>
+
+<p>
+  <strong>Content:</strong>
+  <%= @source_tu.content %>
+</p>
+<p>
+  <strong>Language:</strong>
+  <%= @source_tu.language_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_source_tu_path(@source_tu) %> |
+  <%= link_to "Destroy", @source_tu, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", source_tus_path %>
+</p>

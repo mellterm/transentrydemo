@@ -1,4 +1,24 @@
 Transentrydemo::Application.routes.draw do
+  resources :users
+
+  resources :tags
+
+  resources :documents
+
+  resources :domain_matrices
+
+  resources :target_tus
+
+  resources :source_tus
+
+  resources :sources
+
+  resources :domains
+
+  resources :languages
+  
+  resources :translations
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

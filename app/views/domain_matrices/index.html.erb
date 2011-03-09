@@ -1,0 +1,19 @@
+<% title "Domain Matrices" %>
+
+<table>
+  <tr>
+    <th>Translation</th>
+    <th>Domain</th>
+  </tr>
+  <% for domain_matrix in @domain_matrices %>
+    <tr>
+      <td><%= domain_matrix.translation_id %></td>
+      <td><%= domain_matrix.domain_id %></td>
+      <td><%= link_to "Show", domain_matrix %></td>
+      <td><%= link_to "Edit", edit_domain_matrix_path(domain_matrix) %></td>
+      <td><%= link_to "Destroy", domain_matrix, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Domain Matrix", new_domain_matrix_path %></p>

@@ -1,0 +1,11 @@
+one:
+  source_tu_id: 1
+  target_tu_id: 1
+  source_id: 1
+  is_public: false
+
+two:
+  source_tu_id: 1
+  target_tu_id: 1
+  source_id: 1
+  is_public: false

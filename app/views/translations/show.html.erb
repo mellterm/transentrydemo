@@ -1,0 +1,29 @@
+<% title "Source Tu" %>
+
+<p>
+  <strong>Content:</strong>
+  <%= SourceTu.find_by_id(@translation.source_tu_id).content %>
+</p>
+<p>
+  <strong>S Language:</strong>
+  <%= Language.find_by_id(@translation.source_tu.language_id).code %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%= @translation.target_tu.content %>
+</p>
+<p>
+  <strong>T Language:</strong>
+  <%= @translation.target_tu.language_id %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= Source.find_by_id(@translation.source_id) %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_translation_path(@translation) %> |
+  <%= link_to "Destroy", @translation, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", translations_path %>
+</p>

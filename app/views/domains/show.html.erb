@@ -1,0 +1,12 @@
+<% title "Domain" %>
+
+<p>
+  <strong>Code:</strong>
+  <%= @domain.code %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_domain_path(@domain) %> |
+  <%= link_to "Destroy", @domain, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", domains_path %>
+</p>

@@ -1,0 +1,16 @@
+<% title "Target Tu" %>
+
+<p>
+  <strong>Content:</strong>
+  <%= @target_tu.content %>
+</p>
+<p>
+  <strong>Language:</strong>
+  <%= @target_tu.language_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_target_tu_path(@target_tu) %> |
+  <%= link_to "Destroy", @target_tu, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", target_tus_path %>
+</p>

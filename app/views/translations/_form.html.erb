@@ -1,0 +1,48 @@
+<%= form_for @translation do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :source_id, "Source ID" %><br />
+    <%= f.collection_select :source_id, Source.all, :id, :name, :prompt => true %>
+  </p>
+  
+  <%= f.fields_for @source_tu do |su| %>
+  	  	<p>
+   		<%= su.label :content, "Source term" %><br />
+    	<%= su.text_area :content, :rows => 3 %>
+  		</p>
+  		<p>
+   		<%= su.label :language_id, "Source language" %><br />
+    	<%= su.collection_select :language_id, Language.all, :id, :code, :prompt => true  %>
+  		</p>
+  <% end %>
+  
+    <%= f.fields_for @target_tu do |tu| %>
+  	  	<p>
+   		<%= tu.label :content, "Target term" %><br />
+    	<%= tu.text_area :content, :rows => 3 %>
+  		</p>
+  		<p>
+   		<%= tu.label :language_id, "Target language" %><br />
+    	<%= tu.collection_select :language_id, Language.all, :id, :code, :prompt => true  %>
+  		</p>
+  <% end %>
+  
+  
+  
+  
+   <%= f.fields_for :domains do |d| %>
+  	  	<p>
+   		<%= d.label :domain_id, "Domain Code" %><br />
+    	<%= d.collection_select :domain_id, Domain.all, :id, :code, :prompt => true %>
+  		</p>
+  <% end %>
+  
+  
+  
+  
+  <p>
+    <%= f.label :is_public %><br />
+    <%= f.check_box :is_public %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,19 @@
+<% title "Source Tus" %>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Language</th>
+  </tr>
+  <% for source_tu in @source_tus %>
+    <tr>
+      <td><%= source_tu.content %></td>
+      <td><%= source_tu.language_id %></td>
+      <td><%= link_to "Show", source_tu %></td>
+      <td><%= link_to "Edit", edit_source_tu_path(source_tu) %></td>
+      <td><%= link_to "Destroy", source_tu, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Source Tu", new_source_tu_path %></p>

@@ -1,0 +1,19 @@
+<% title "Target Tus" %>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Language</th>
+  </tr>
+  <% for target_tu in @target_tus %>
+    <tr>
+      <td><%= target_tu.content %></td>
+      <td><%= target_tu.language_id %></td>
+      <td><%= link_to "Show", target_tu %></td>
+      <td><%= link_to "Edit", edit_target_tu_path(target_tu) %></td>
+      <td><%= link_to "Destroy", target_tu, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Target Tu", new_target_tu_path %></p>

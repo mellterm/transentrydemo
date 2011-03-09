@@ -1,0 +1,12 @@
+<%= form_for @domain_matrix do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :translation_id %><br />
+    <%= f.text_field :translation_id %>
+  </p>
+  <p>
+    <%= f.label :domain_id %><br />
+    <%= f.text_field :domain_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

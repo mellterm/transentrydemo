@@ -1,0 +1,9 @@
+one:
+  name: MyString
+  translation_type: MyString
+  user_id: 1
+
+two:
+  name: MyString
+  translation_type: MyString
+  user_id: 1

@@ -1,0 +1,16 @@
+<% title "Domain Matrix" %>
+
+<p>
+  <strong>Translation:</strong>
+  <%= @domain_matrix.translation_id %>
+</p>
+<p>
+  <strong>Domain:</strong>
+  <%= @domain_matrix.domain_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_domain_matrix_path(@domain_matrix) %> |
+  <%= link_to "Destroy", @domain_matrix, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", domain_matrices_path %>
+</p>
