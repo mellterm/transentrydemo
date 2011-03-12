@@ -1,3 +1,17 @@
+# == Schema Information
+# Schema version: 20110309094442
+#
+# Table name: translations
+#
+#  id           :integer         not null, primary key
+#  source_tu_id :integer
+#  target_tu_id :integer
+#  source_id    :integer
+#  is_public    :boolean
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+
 one:
   source_tu_id: 1
   target_tu_id: 1

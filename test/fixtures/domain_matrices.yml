@@ -1,3 +1,15 @@
+# == Schema Information
+# Schema version: 20110309094442
+#
+# Table name: domain_matrices
+#
+#  id             :integer         not null, primary key
+#  translation_id :integer
+#  domain_id      :integer
+#  created_at     :datetime
+#  updated_at     :datetime
+#
+
 one:
   translation_id: 1
   domain_id: 1

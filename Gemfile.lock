@@ -28,6 +28,7 @@ GEM
       activemodel (= 3.0.3)
       activesupport (= 3.0.3)
     activesupport (3.0.3)
+    annotate-models (1.0.4)
     arel (2.0.9)
     builder (2.1.2)
     erubis (2.6.6)
@@ -71,6 +72,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate-models (= 1.0.4)
   mocha
   nifty-generators
   rails (= 3.0.3)

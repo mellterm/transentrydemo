@@ -1,3 +1,15 @@
+# == Schema Information
+# Schema version: 20110309094442
+#
+# Table name: source_tus
+#
+#  id          :integer         not null, primary key
+#  content     :string(255)
+#  language_id :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
 one:
   content: MyString
   language_id: 1

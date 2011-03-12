@@ -9,11 +9,12 @@
   </tr>
   <% for translation in @translations %>
     <tr>
+    	
       <td><%= translation.source_tu.content %></td>
       <td><%= translation.source_tu.language_id %></td>
       <td><%= translation.target_tu.content %></td>
       <td><%= translation.target_tu.language_id %></td>
-      <td><%= Source.find_by_id(translation.source_id).name %></td> 
+	  <td><%= Source.find_by_id(translation.source_id).name %></td> 
       <td><%= translation.is_public %></td>
       <td><%= link_to "Show", translation %></td>
       <td><%= link_to "Edit", edit_translation_path(translation) %></td>
