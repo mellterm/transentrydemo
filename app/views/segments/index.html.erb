@@ -1,0 +1,35 @@
+<% title "Segments" %>
+
+<table>
+  <tr>
+    <th>Source Content</th>
+    <th>Target Content</th>
+    <th>Source Language</th>
+    <th>Target Language</th>
+    <th>User</th>
+    <th>Document</th>
+    <th>Domain</th>
+    <th>Crd</th>
+    <th>Cru</th>
+    <th>Raw Data</th>
+  </tr>
+  <% for segment in @segments %>
+    <tr>
+      <td><%= segment.source_content %></td>
+      <td><%= segment.target_content %></td>
+      <td><%= segment.source_language_id %></td>
+      <td><%= segment.target_language_id %></td>
+      <td><%= segment.user_id %></td>
+      <td><%= segment.document_id %></td>
+      <td><%= segment.domain_id %></td>
+      <td><%= segment.crd %></td>
+      <td><%= segment.cru %></td>
+      <td><%= segment.raw_data %></td>
+      <td><%= link_to "Show", segment %></td>
+      <td><%= link_to "Edit", edit_segment_path(segment) %></td>
+      <td><%= link_to "Destroy", segment, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Segment", new_segment_path %></p>

@@ -1,0 +1,44 @@
+<%= form_for @segment do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :source_content %><br />
+    <%= f.text_field :source_content %>
+  </p>
+  <p>
+    <%= f.label :target_content %><br />
+    <%= f.text_field :target_content %>
+  </p>
+  <p>
+    <%= f.label :source_language_id %><br />
+    <%= f.text_field :source_language_id %>
+  </p>
+  <p>
+    <%= f.label :target_language_id %><br />
+    <%= f.text_field :target_language_id %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :document_id %><br />
+    <%= f.text_field :document_id %>
+  </p>
+  <p>
+    <%= f.label :domain_id %><br />
+    <%= f.text_field :domain_id %>
+  </p>
+  <p>
+    <%= f.label :crd %><br />
+    <%= f.text_field :crd %>
+  </p>
+  <p>
+    <%= f.label :cru %><br />
+    <%= f.text_field :cru %>
+  </p>
+  <p>
+    <%= f.label :raw_data %><br />
+    <%= f.text_area :raw_data %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

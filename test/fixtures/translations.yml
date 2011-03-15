@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110309094442
+# Schema version: 20110315040826
 #
 # Table name: translations
 #
@@ -10,6 +10,7 @@
 #  is_public    :boolean
 #  created_at   :datetime
 #  updated_at   :datetime
+#  user_id      :integer
 #
 
 one:

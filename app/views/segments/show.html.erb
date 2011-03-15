@@ -1,0 +1,48 @@
+<% title "Segment" %>
+
+<p>
+  <strong>Source Content:</strong>
+  <%= @segment.source_content %>
+</p>
+<p>
+  <strong>Target Content:</strong>
+  <%= @segment.target_content %>
+</p>
+<p>
+  <strong>Source Language:</strong>
+  <%= @segment.source_language_id %>
+</p>
+<p>
+  <strong>Target Language:</strong>
+  <%= @segment.target_language_id %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%= @segment.user_id %>
+</p>
+<p>
+  <strong>Document:</strong>
+  <%= @segment.document_id %>
+</p>
+<p>
+  <strong>Domain:</strong>
+  <%= @segment.domain_id %>
+</p>
+<p>
+  <strong>Crd:</strong>
+  <%= @segment.crd %>
+</p>
+<p>
+  <strong>Cru:</strong>
+  <%= @segment.cru %>
+</p>
+<p>
+  <strong>Raw Data:</strong>
+  <%= @segment.raw_data %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_segment_path(@segment) %> |
+  <%= link_to "Destroy", @segment, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", segments_path %>
+</p>

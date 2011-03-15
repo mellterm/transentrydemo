@@ -1,11 +1,5 @@
 class UsersController < ApplicationController
-  def index
-    @users = User.all
-  end
-
-  def show
-    @user = User.find(params[:id])
-  end
+  before_filter :login_required, :except => [:new, :create]
 
   def new
     @user = User.new
@@ -14,28 +8,23 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to @user, :notice => "Successfully created user."
+      session[:user_id] = @user.id
+      redirect_to root_url, :notice => "Thank you for signing up! You are now logged in."
     else
       render :action => 'new'
     end
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = current_user
   end
 
   def update
-    @user = User.find(params[:id])
+    @user = current_user
     if @user.update_attributes(params[:user])
-      redirect_to @user, :notice  => "Successfully updated user."
+      redirect_to root_url, :notice => "Your profile has been updated."
     else
       render :action => 'edit'
     end
-  end
-
-  def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-    redirect_to users_url, :notice => "Successfully destroyed user."
   end
 end

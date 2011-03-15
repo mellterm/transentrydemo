@@ -13,6 +13,8 @@
   <%= @document.user_id %>
 </p>
 
+<%= image_tag @document.data.url %>
+
 <p>
   <%= link_to "Edit", edit_document_path(@document) %> |
   <%= link_to "Destroy", @document, :confirm => 'Are you sure?', :method => :delete %> |

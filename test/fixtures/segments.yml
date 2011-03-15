@@ -1,0 +1,23 @@
+one:
+  source_content: MyString
+  target_content: MyString
+  source_language_id: 1
+  target_language_id: 1
+  user_id: 1
+  document_id: 1
+  domain_id: 1
+  crd: MyString
+  cru: MyString
+  raw_data: MyText
+
+two:
+  source_content: MyString
+  target_content: MyString
+  source_language_id: 1
+  target_language_id: 1
+  user_id: 1
+  document_id: 1
+  domain_id: 1
+  crd: MyString
+  cru: MyString
+  raw_data: MyText

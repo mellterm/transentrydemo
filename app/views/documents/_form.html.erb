@@ -1,16 +1,19 @@
-<%= form_for @document do |f| %>
+
+<%= form_for @document, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :translation_type %><br />
+    <%= f.label :translation_type, "Document Type" %><br />
     <%= f.text_field :translation_type %>
   </p>
   <p>
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
+  	<%= f.label :data, "Browse File" %><br />
+    <%= f.file_field :data %>
   </p>
+  
+  
   <p><%= f.submit %></p>
 <% end %>

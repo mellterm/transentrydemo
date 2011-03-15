@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110312070005) do
+ActiveRecord::Schema.define(:version => 20110315072638) do
 
   create_table "documents", :force => true do |t|
     t.string   "name"
@@ -18,6 +18,10 @@ ActiveRecord::Schema.define(:version => 20110312070005) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "data_file_name"
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.datetime "data_updated_at"
   end
 
   create_table "domain_matrices", :force => true do |t|
@@ -35,6 +39,21 @@ ActiveRecord::Schema.define(:version => 20110312070005) do
 
   create_table "languages", :force => true do |t|
     t.string   "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "segments", :force => true do |t|
+    t.string   "source_content"
+    t.string   "target_content"
+    t.integer  "source_language_id"
+    t.integer  "target_language_id"
+    t.integer  "user_id"
+    t.integer  "document_id"
+    t.integer  "domain_id"
+    t.string   "crd"
+    t.string   "cru"
+    t.text     "raw_data"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -77,7 +96,10 @@ ActiveRecord::Schema.define(:version => 20110312070005) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name"
+    t.string   "username"
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
